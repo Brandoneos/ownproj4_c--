@@ -5,7 +5,7 @@ using namespace std;
 #include <vector>
 
 int main() {
-    libraryDatabase l1;
+    LibraryDatabase l1;
     int input = 0;
     while(input != 6) {
         prompt(input);

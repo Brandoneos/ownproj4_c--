@@ -16,7 +16,7 @@ using namespace std;
 
 //function definitions
 
-class libraryDatabase {
+class LibraryDatabase {
     private:
     
     int numberOfBooks;
@@ -79,10 +79,12 @@ class libraryDatabase {
 
     int checkOut(string bookname) {
         int ind = 0;
+        
         for (int i = 0; i < numberOfBooks; i++) {
             if(library.at(i).title == bookname && !(library.at(i).checkedOut)) {
                 ind = 1;
                 library.at(i).checkedOut = true;
+                return ind;
             }
         }
         return ind;
@@ -93,6 +95,7 @@ class libraryDatabase {
             
             if(library.at(i).title == bookname) {
                 library.at(i).checkedOut = false;
+                return;
             }
         }
     }
